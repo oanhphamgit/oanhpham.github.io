@@ -1,0 +1,268 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px;
+
+    /* Updated alignment */
+    justify-content: flex-start;  /* Align everything to the left */
+    gap: 20px; /* Add space between logo and nav links */
+}
+
+/* Logo */
+/* Ensure correct targeting of the logo */
+.logo img {
+    width: 70px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent it from getting too large */
+}
+
+/* Navigation Links (Desktop) */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-family: 'Aclonica', sans-serif;
+    font-size: 16px;
+    color: black;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #F57C00; /* Orange hover effect */
+}
+
+/* Hamburger Menu (Hidden on Desktop) */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    background: black;
+    height: 3px;
+    width: 25px;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+/* 📱 Mobile Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    /* Toggle effect when menu is open */
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+
+/* === Basic Style - Applies to all elements on the page === */
+body {  
+    font-family: 'Inter', sans-serif;  /* Default body font */
+    font-size: 16px;  /* Default text size for laptop */
+    background-color: #ffffff;  /* White background */
+    color: #000000;  /* Black text */
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out; /* Smooth transitions for interactive elements */
+}
+
+/* === Headings === */
+h1 {  
+    font-family: 'Inknut Antiqua', serif;  
+    font-size: 32px;  /* Laptop */
+    color: #F57C00;  /* Orange */
+    text-decoration: underline;  /* Slight underline for emphasis */
+    margin-bottom: 0px;
+}
+
+h2 {  
+    font-family: 'Aclonica', sans-serif;  
+    font-size: 18px;  /* Laptop */
+    background-color: #D8FCB9;  /* Green */
+    max-width: 1150px;
+    margin: 15px auto; /* centers the paragraph */
+    padding: 0px 5px; /* spacing on small screens */
+    margin-top: 5px; /* reduce space above */
+    margin-bottom: 5px;
+}
+
+/* === Navigation Bar === */
+nav {
+    font-family: 'Aclonica', sans-serif;  
+    font-size: 16px;  /* Laptop */
+    background-color: #FFC107;  /* Yellow */
+    padding: 10px;
+    position: sticky;  
+    top: 0;  
+    z-index: 1000;
+}
+
+/* Style for navigation links */
+nav a {
+    text-decoration: none;
+    color: #000000;
+    margin: 0 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    color: #F57C00;  /* Orange effect */
+    transform: scale(1.1);  /* Slight scaling */
+}
+
+/* === Buttons === */
+button {  
+    font-family: 'Inter', sans-serif;  
+    font-size: 16px;  /* Laptop */
+    background-color: #D8FCB9;  /* Green */
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #F57C00;  /* Orange */
+    transform: scale(1.05);  /* Slight scaling */
+}
+
+/* === Images === */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* === Mobile Styles === */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 20px;  /* Mobile */
+    }
+
+    h2 {
+        font-size: 16px;  /* Mobile */
+    }
+
+    body {
+        font-size: 14px;  /* Mobile */
+    }
+
+    nav {
+        font-size: 14px;  /* Mobile */
+    }
+
+    button {
+        font-size: 14px;  /* Mobile */
+    }
+
+    /* Mobile Navigation - Hamburger Menu */
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.hero h1 {
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #F57C00; /* Orange tone as discussed */
+    text-align: center;
+    margin-top: -12px;
+    padding: 10px;
+}
+.hero-image {
+    display: block;
+    margin: 0px auto; /* Center horizontally + space from h1 */
+    max-width: 60%;
+    height: auto;
+    border-radius: 12px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Optional: soft shadow */
+}
+.image-credit {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+    color: #666;
+}
+.image-credit a {
+    color: #666;
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px){
+    .hero h1 {
+        font-size: 20px;
+        padding: 15px;
+    }
+}    
+
+.introduction-paragraph {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    max-width: 1150px;
+    margin: 10px auto; /* centers the paragraph */
+    padding: 0 15px; /* spacing on small screens */
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Mobile screen adjustments */
+@media (max-width: 768px) {
+    .introduction-paragraph {
+        font-size: 15px;
+    }
+}
