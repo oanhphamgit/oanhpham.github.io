@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Vietnam travel, travel guide, best destinations, Vietnam tourism">
-    <meta name="description" content="Explore the best travel destinations in Vietnam with our detailed guides, travel tips, and must-visit attractions.">
+    <meta name="description"
+        content="Explore the best travel destinations in Vietnam with our detailed guides, travel tips, and must-visit attractions.">
     <title>Vietnam Travel Guide</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts -->
@@ -13,18 +15,26 @@
     <link href="https://fonts.googleapis.com/css?family=Aclonica" rel="stylesheet">
 </head>
 <header>
-    <nav class="navbar">
+    <nav class="navbar section-content">
         <!-- Logo -->
         <a href="index.html" class="logo">
             <img src="logo.png" alt="Vietnam Travel Guide Logo">
         </a>
 
         <!-- Navigation Links (Desktop) -->
-        <ul class="nav-links">
-            <li><a href="index.html">Homepage</a></li>
-            <li><a href="page2.html">Destinations</a></li>
-            <li><a href="page3.html">Travel Tips</a></li>
-            <li><a href="search.html">Search</a></li>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-links">Homepage</a>
+            </li>
+            <li class="nav-item">
+                <a href="page2.html" class="nav-links">Destinations</a>
+            </li>
+            <li class="nav-item">
+                <a href="page3.html" class="nav-links">Travel Tips</a>
+            </li>
+            <li class="nav-item">
+                <a href="search.html" class="nav-links">Search</a>
+            </li>
         </ul>
 
         <!-- Hamburger Menu (Mobile) -->
@@ -35,23 +45,119 @@
         </div>
     </nav>
 </header>
+
 <body>
-    <section class="hero">
-        <h1>Welcome to Vietnam Travel Guide!</h1>
-        <img src="cover-image-welcome.jpg" alt="Beautiful scenery in Vietnam" class="hero-image">
-    </section>
-    <p class="image-credit">
-        Source: Photo by <a href="https://www.pexels.com/@pixabay" target="_blank">Pixabay</a> on 
-        <a href="https://www.pexels.com/photo/island-formation-58597/" target="_blank">Pexels</a>
-    </p>
-    <p class="introduction-paragraph">
-        Best time to visit! <br>
-        Discover the beauty of Vietnam, from vibrant cities to breathtaking landscapes. Whether you are an adventure seeker, a culture enthusiast, or a food lover, Vietnam has something for everyone.
-        <br>
-        Explore the rich history, stunning natural wonders, and delicious cuisine that make Vietnam a must-visit destination. Our travel guide provides you with all the information you need to plan your perfect trip.
-    </p>
-    <h2 class="2ndheading">
-        Futured Destinations
-    </h2>       
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="section-content">
+                <div class="hero-details">
+                    <h1 class="title">Welcome to Vietnam Travel Guide!</h1>
+                    <img src="cover-image-welcome.jpg" alt="Beautiful scenery in Vietnam" class="hero-image">
+                    <p class="image-credit">
+                        Source: Photo by <a href="https://www.pexels.com/@pixabay" target="_blank">Pixabay</a> on
+                        <a href="https://www.pexels.com/photo/island-formation-58597/" target="_blank">Pexels</a>
+                    </p>
+                    <p class="introduction-paragraph">
+                        Best time to visit! <br>
+                        Discover the beauty of Vietnam, from vibrant cities to breathtaking landscapes. Whether you are
+                        an adventure
+                        seeker, a culture enthusiast, or a food lover, Vietnam has something for everyone. Explore the
+                        rich history, stunning natural wonders, and delicious cuisine that make Vietnam a must-visit
+                        destination. Our travel guide provides you with all the information you need to plan your
+                        perfect trip.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Hero Section End -->
+
+        <section class="featured-destinations-section">
+            <div class="section-content">
+                <h2 class="2ndheading">
+                    Featured Destinations
+                </h2>
+                <div class="featured-destinations-content">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15743754.876145782!2d95.22469367600816!3d15.554732236950501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31157a4d736a1e5f%3A0xb03bb0c9e2fe62be!2zVmnhu4d0IE5hbQ!5e0!3m2!1svi!2sfi!4v1744102472662!5m2!1svi!2sfi"
+                        width="300" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="content-destination-card">
+                        <div class="destination-card">
+                            <h3>Ha Long Bay</h3>
+                            <p>Experience the stunning limestone karsts and emerald waters of Ha Long Bay, a UNESCO
+                                World
+                                Heritage
+                                Site.
+                                Take a cruise through the bay to witness the magical sunset over the islands, or kayak
+                                through
+                                hidden caves and floating villages.
+                                It's a paradise for nature lovers and photographers alike.
+                            </p>
+                            <div class="buttons">
+                                <a href="#" class="button hlb">Read more</a>
+                            </div>
+                        </div>
+                        <div class="destination-card">
+                            <h3>Hanoi</h3>
+                            <p>Explore the vibrant culture and rich history of Vietnam's capital city, Hanoi.
+                                Wander through the Old Quarter’s narrow streets filled with street food and traditional
+                                crafts,
+                                or
+                                relax by the peaceful Hoan Kiem Lake. Hanoi beautifully blends French colonial charm
+                                with
+                                ancient
+                                Vietnamese traditions.
+                            </p>
+                            <div class="buttons">
+                                <a href="#" class="button hn">Read more</a>
+                            </div>
+                        </div>
+                        <div class="destination-card">
+                            <h3>Ho Chi Minh City</h3>
+                            <p>Discover the bustling streets and vibrant nightlife of Ho Chi Minh City, Vietnam's
+                                largest city.
+                                Visit historical landmarks like the War Remnants Museum and the Cu Chi Tunnels, or shop
+                                at
+                                lively
+                                markets like Ben Thanh. The city pulses with energy, offering a modern twist on classic
+                                Vietnamese
+                                life.
+                            </p>
+                            <div class="buttons">
+                                <a href="#" class="button hcm">Read more</a>
+                            </div>
+                        </div>
+                        <div class="destination-image">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- Footer Section -->
+        <footer class="footer-section">
+            <div class="footer-content">
+                <p class="copyright-text">© 2025 Travel Vietnam Guide</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="facebook-icon.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="instagram-icon.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank">
+                        <img src="youtube-icon.png" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
 </body>
+
 </html>
