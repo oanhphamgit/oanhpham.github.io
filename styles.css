@@ -605,7 +605,7 @@ p {
     padding-left: 20px; /* Loại bỏ khoảng cách mặc định bên trái */
     margin-left: 0; /* Thụt lề ngang để căn chỉnh với tiêu đề */
     list-style-position: inside; /* Đảm bảo bullet nằm bên trong danh sách */
-    line-height: 1.6; /* Tăng khoảng cách giữa các dòng để dễ đọc */
+    line-height: 1.6; 
 }
 
 
