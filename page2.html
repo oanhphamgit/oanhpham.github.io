@@ -8,6 +8,7 @@
     <meta name="description"
         content="Explore the best travel destinations in Vietnam with our detailed guides, travel tips, and must-visit attractions.">
     <title>Vietnam Travel Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Inknut Antiqua" rel="stylesheet">
@@ -23,6 +24,7 @@
 
         <!-- Navigation Links (Desktop) -->
         <ul class="nav-menu">
+            <button id="menu-close-button" class="fas fa-times"></button>
             <li class="nav-item">
                 <a href="index.html" class="nav-links">Homepage</a>
             </li>
@@ -32,11 +34,8 @@
             <li class="nav-item">
                 <a href="page3.html" class="nav-links">Travel Tips</a>
             </li>
-            <li class="nav-item">
-                <a href="search.html" class="nav-links">Search</a>
-            </li>
         </ul>
-
+        <button id="menu-open-button" class="fas fa-bars"></button>
         <!-- Hamburger Menu (Mobile) -->
         <div class="hamburger-menu">
             <span></span>
@@ -1333,6 +1332,7 @@
             </div>
         </footer>
     </main>
+    <script src="hamburger-menu.js"></script>
 </body>
 
 </html>
