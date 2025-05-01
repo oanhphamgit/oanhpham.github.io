@@ -2,7 +2,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
 
@@ -41,6 +40,7 @@ button {
 .section-content {
     margin: 0 auto;
     padding: 0 20px;
+    max-width: var(--site-max-width);
 }
 
 /* Navbar Styles */
@@ -69,7 +69,7 @@ header .navbar {
 .navbar .nav-menu {
     display: flex;
     gap: 50px;
-    margin-right: auto;
+    /* margin-right: auto; */
 }
 
 .navbar .nav-menu .nav-links {
@@ -77,14 +77,16 @@ header .navbar {
     font-size: 16px;
     color: var(--text-color);
     padding: 10px 18px;
-    border-radius: 20px;
+    border-radius: 5px;
     transition: 0.3s, color 0.3s;
 }
 
 .navbar .nav-menu .nav-links:hover {
-    color: orange;
-    /* Orange hover effect */
-    background: var(--background-color);
+    background: var(--secondary-color);
+}
+
+.navbar :where(#menu-close-button, #menu-open-button) {
+    display: none;
 }
 
 body {
@@ -107,39 +109,6 @@ body {
     width: 25px;
     margin: 4px;
     transition: 0.3s;
-}
-
-/* 📱 Mobile Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: white;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 10px 0;
-    }
-
-    .nav-links li {
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .nav-links a {
-        font-size: 14px;
-    }
-
-    .hamburger-menu {
-        display: flex;
-    }
-
-    /* Toggle effect when menu is open */
-    .nav-links.active {
-        display: flex;
-    }
 }
 
 /* === Basic Style - Applies to all elements on the page === */
@@ -252,6 +221,7 @@ h4 {
     /* Orange tone as discussed */
     text-align: center;
     margin-top: -12px;
+    margin-bottom: -12px;
     padding: 10px;
 }
 
@@ -364,13 +334,17 @@ p {
 
 /* Highlighted travel tips */
 .featured-destinations-section .section-content .paragraph {
-    font-size: 16px; /* Kích thước chữ */
-    color: #333; /* Màu chữ */
+    font-size: 16px;
+    /* Kích thước chữ */
+    color: #333;
+    /* Màu chữ */
     font-family: 'Inter', sans-serif;
     padding-left: 0;
-    list-style-position: inside; /* Đảm bảo bullet nằm bên trong danh sách */
-    line-height: 1.6; 
-    max-width: 1150px; /* Giới hạn chiều rộng */
+    list-style-position: inside;
+    /* Đảm bảo bullet nằm bên trong danh sách */
+    line-height: 1.6;
+    max-width: 1150px;
+    /* Giới hạn chiều rộng */
     margin-inline: auto;
 }
 
@@ -393,30 +367,41 @@ p {
 
 /* Page 2 - places to travel */
 
+/* Default styles for larger screens (Laptop View) */
 .section-content .secondheading {
-    display: flex;
-    gap: 70px;
-    margin-right: auto;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 cột, mỗi cột chiếm 1 phần bằng nhau */
+    gap: 20px;
+    /* Khoảng cách giữa các nút */
     justify-content: center;
-    font-family: 'Aclonica', sans-serif;
-    font-size: 18px;
-    background-color: #D8FCB9;
-    max-width: 1150px;
-    margin: 15px auto;
-    padding: 0px 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-weight: bold;
+    /* Căn giữa các nút */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    list-style: none;
+    /* Loại bỏ bullet points */
+    padding: 0;
+    margin: 10px auto;
+    max-width: 800px;
+    /* Giới hạn chiều rộng */
 }
 
-.secondheading .buttons {
-    display: flex;
-    padding: 0px 20px;
-    cursor: pointer;
-    color: var(--text-color);
-    border-radius: 20px;
-    transition: 0.3s, color 0.3s;
+/* Styling for individual buttons */
+.section-content .secondheading .buttons {
+    text-align: center;
+}
+
+.section-content .secondheading .button {
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Aclonica', sans-serif;
+    text-decoration: none;
+    background-color: #D8FCB9;
+    ;
+    /* Màu nền */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .secondheading .buttons :hover {
@@ -434,25 +419,31 @@ p {
     display: flex;
     gap: 20px;
     align-items: center;
-    margin-top: 20px;
     justify-content: center;
 }
 
 .video-container {
     position: relative;
-    width: 100%; /* Video sẽ chiếm toàn bộ chiều rộng của container */
-    max-width: 1150px; /* Giới hạn chiều rộng tối đa trên laptop */
-    margin: 0 auto; /* Căn giữa video */
-    padding-top: 56.25%; /* Tỷ lệ 16:9 (chiều cao = 56.25% chiều rộng) */
+    width: 100%;
+    /* Video sẽ chiếm toàn bộ chiều rộng của container */
+    max-width: 1150px;
+    /* Giới hạn chiều rộng tối đa trên laptop */
+    margin: 0 auto;
+    /* Căn giữa video */
+    padding-top: 56.25%;
+    /* Tỷ lệ 16:9 (chiều cao = 56.25% chiều rộng) */
 }
 
 .video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Chiều rộng video tự động điều chỉnh */
-    height: 100%; /* Chiều cao video tự động điều chỉnh */
-    border: none; /* Loại bỏ viền */
+    width: 100%;
+    /* Chiều rộng video tự động điều chỉnh */
+    height: 100%;
+    /* Chiều cao video tự động điều chỉnh */
+    border: none;
+    z-index: -1;
 }
 
 .destinationscontent .paragraph {
@@ -545,6 +536,7 @@ p {
     transition: 0.3s, color 0.3s;
 
 }
+
 .image-places-credit {
     font-size: 8px;
     text-align: center;
@@ -559,91 +551,111 @@ p {
 
 /* Page 3 - travel tips */
 /* Travel tips section */
-.culture-insight-section .section-content .table{
-    max-width: 1150px; /* Đặt bảng chiếm toàn bộ chiều rộng */
-    border-collapse: collapse; /* Loại bỏ khoảng cách giữa các ô */
-    margin: 20px auto; /* Căn giữa bảng */
-    text-align: left; /* Căn trái nội dung mặc định */
-    border: 1px solid #000; /* Đường viền bảng */
+.culture-insight-section .section-content .table {
+    max-width: 1150px;
+    /* Đặt bảng chiếm toàn bộ chiều rộng */
+    border-collapse: collapse;
+    /* Loại bỏ khoảng cách giữa các ô */
+    margin: 20px auto;
+    /* Căn giữa bảng */
+    text-align: left;
+    /* Căn trái nội dung mặc định */
+    border: 1px solid #000;
+    /* Đường viền bảng */
 }
 
 .culture-insight-section .section-content .table th {
-    text-align: center; /* Căn giữa nội dung */
-    font-weight: bold; /* In đậm */
-    background-color: #f0f0f0; /* Màu nền nhạt */
-    padding: 10px; /* Khoảng cách bên trong ô */
-    border: 1px solid #000; /* Đường viền ô */
+    text-align: center;
+    /* Căn giữa nội dung */
+    font-weight: bold;
+    /* In đậm */
+    background-color: #f0f0f0;
+    /* Màu nền nhạt */
+    padding: 10px;
+    /* Khoảng cách bên trong ô */
+    border: 1px solid #000;
+    /* Đường viền ô */
 }
 
 /* Định dạng nội dung (td) */
 .culture-insight-section .section-content .table td {
-    padding: 10px; /* Khoảng cách bên trong ô */
-    border: 1px solid #000; /* Đường viền ô */
-    vertical-align: top; /* Căn nội dung lên trên */
+    padding: 10px;
+    /* Khoảng cách bên trong ô */
+    border: 1px solid #000;
+    /* Đường viền ô */
+    vertical-align: top;
+    /* Căn nội dung lên trên */
 }
 
 /* Communication tips section */
 .travel-tip-section .section-content .paragraph {
-    list-style-type: disc; /* Kiểu bullet (dấu chấm) */
-    font-size: 16px; /* Kích thước chữ */
-    color: #333; /* Màu chữ */
+    list-style-type: disc;
+    /* Kiểu bullet (dấu chấm) */
+    font-size: 16px;
+    /* Kích thước chữ */
+    color: #333;
+    /* Màu chữ */
     font-family: 'Inter', sans-serif;
     padding-left: 0;
-    list-style-position: inside; /* Đảm bảo bullet nằm bên trong danh sách */
-    line-height: 1.6; 
-    max-width: 1150px; /* Giới hạn chiều rộng */
+    list-style-position: inside;
+    /* Đảm bảo bullet nằm bên trong danh sách */
+    line-height: 1.6;
+    max-width: 1150px;
+    /* Giới hạn chiều rộng */
     margin-inline: auto;
 }
 
 
 /* Footer Styles */
 .footer-section {
-    background-color: #D8FCB9; /* Xanh lá nhẹ nhàng */
+    background-color: #D8FCB9;
+    /* Xanh lá nhẹ nhàng */
     text-align: center;
-  }
-  
-  .footer-content {
+}
+
+.footer-content {
     max-width: 1000px;
     margin: 0 auto;
     padding: 5px 10px;
-  }
-  
-  .footer-content p {
+}
+
+.footer-content p {
     margin: 5px 0;
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     color: #333;
-  }
-  
-  .social-icons {
+}
+
+.social-icons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     margin: 10px 0;
-  }
-  
-  .social-icons a img {
+}
+
+.social-icons a img {
     width: 15px;
     height: 15px;
     transition: transform 0.3s;
-  }
-  
-  .social-icons a:hover img {
-    transform: scale(1.2); /* Hiệu ứng hover */
-  }
-  
-  /* Responsive cho mobile nhỏ */
-  @media screen and (max-width: 480px) {
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+    /* Hiệu ứng hover */
+}
+
+/* Responsive cho mobile nhỏ */
+@media screen and (max-width: 480px) {
     .social-icons {
-      gap: 15px;
+        gap: 15px;
     }
-  
+
     .footer-content p {
-      font-size: 13px;
+        font-size: 13px;
     }
-  }
-  
+}
+
 
 /* Mobile screen adjustments */
 @media (max-width: 768px) {
@@ -654,42 +666,142 @@ p {
 
 @media screen and (max-width: 768px) {
     .place-image .image {
-        width: 180px; /* Giảm kích thước ảnh trên màn hình nhỏ */
-        height: 220px; /* Giảm chiều cao tương ứng */
+        width: 180px;
+        /* Giảm kích thước ảnh trên màn hình nhỏ */
+        height: 220px;
+        /* Giảm chiều cao tương ứng */
     }
 }
 
 /* Grid container for map and content */
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns for laptop view */
-    gap: 20px; /* Space between the map and content */
-    align-items: start; /* Align items at the top */
+    grid-template-columns: 1fr 1fr;
+    /* Two equal columns for laptop view */
+    gap: 10px;
+    /* Space between the map and content */
+    align-items: start;
+    /* Align items at the top */
     margin: 20px auto;
-    max-width: 1200px; /* Limit the width of the container */
+    max-width: 1150px;
+    /* Limit the width of the container */
 }
 
 /* Map iframe styling */
 .map-iframe {
-    width: 100%; /* Full width of the grid column */
-    height: 450px; /* Fixed height for laptop view */
-    border: none; /* Remove border */
+    width: 100%;
+    /* Full width of the grid column */
+    height: 450px;
+    /* Fixed height for laptop view */
+    border: none;
+    /* Remove border */
 }
 
 /* Content destination card styling */
 .content-destination-card {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Space between destination cards */
+    gap: 20px;
+    /* Space between destination cards */
 }
 
 /* Responsive layout for smaller screens */
 @media screen and (max-width: 768px) {
     .grid-container {
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-columns: 1fr;
+        /* Single column layout */
     }
 
     .map-iframe {
-        height: 300px; /* Adjust height for smaller screens */
+        height: 300px;
+        /* Adjust height for smaller screens */
+    }
+}
+
+/* Responsive styles for tablet and phone view */
+@media screen and (max-width: 768px) {
+    .section-content .secondheading {
+        grid-template-columns: 1fr;
+        /* 2 cột trên tablet */
+        gap: 10px;
+        /* Giảm khoảng cách giữa các nút */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-content .secondheading {
+        grid-template-columns: 1fr;
+        /* 1 cột trên điện thoại */
+        gap: 15px;
+        /* Khoảng cách giữa các nút */
+    }
+}
+
+/* Responsive styles for mobile view */
+@media screen and (max-width: 900px) {
+    .root {
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
+
+    body.show-mobile-menu header::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar :where(#menu-close-button, #menu-open-button) {
+        display: block;
+        font-size: var(--font-size-l);
+    }
+
+    .navbar #menu-close-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    .navbar #menu-open-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    .navbar .nav-menu {
+        display: block;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background-color: #D8FCB9;
+        transition: left 0.2s ease;
+        overflow-y: auto;
+        z-index: 1000;
+    }
+
+    body.show-mobile-menu .navbar .nav-menu {
+        left: 0;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .navbar .nav-menu .nav-links {
+        display: block;
+        color: #000000;
+        font-size: var(--font-size-l);
+        margin-top: 17px;
+        text-align: center;
+        text-decoration: none;
     }
 }
