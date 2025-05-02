@@ -39,7 +39,7 @@ button {
 
 .section-content {
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px;
     max-width: var(--site-max-width);
 }
 
@@ -69,7 +69,6 @@ header .navbar {
 .navbar .nav-menu {
     display: flex;
     gap: 50px;
-    /* margin-right: auto; */
 }
 
 .navbar .nav-menu .nav-links {
@@ -133,7 +132,6 @@ h1 {
     font-size: 32px;
     /* Laptop */
     color: #F57C00;
-    /* Orange */
     margin-bottom: 0px;
 }
 
@@ -144,25 +142,18 @@ h2 {
     /* Green */
     max-width: 1150px;
     margin: 15px auto;
-    /* centers the paragraph */
     padding: 0px 5px;
-    /* spacing on small screens */
     margin-top: 5px;
-    /* reduce space above */
     margin-bottom: 5px;
 }
 
 h3 {
     font-family: 'Aclonica', sans-serif;
     font-size: 16px;
-    /* Laptop */
     max-width: 1150px;
     margin: 15px auto;
-    /* centers the paragraph */
     padding: 0px 5px;
-    /* spacing on small screens */
     margin-top: 5px;
-    /* reduce space above */
     margin-bottom: 5px;
     font-weight: normal;
 }
@@ -218,7 +209,6 @@ h4 {
     font-size: 32px;
     font-weight: bold;
     color: #F57C00;
-    /* Orange tone as discussed */
     text-align: center;
     margin-top: -12px;
     margin-bottom: -12px;
@@ -228,13 +218,10 @@ h4 {
 .hero-image {
     display: block;
     margin: 0px auto;
-    /* Center horizontally + space from h1 */
     max-width: 60%;
     height: auto;
     border-radius: 12px;
-    /* Optional: rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    /* Optional: soft shadow */
 }
 
 .image-credit {
@@ -260,9 +247,6 @@ h4 {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     margin: 10px auto;
-    /* centers the paragraph */
-    padding: 0 20px;
-    /* spacing on small screens */
     line-height: 1.6;
     color: #333;
 }
@@ -270,9 +254,7 @@ h4 {
 .featured-destinations-content {
     display: flex;
     gap: 20px;
-    /* khoảng cách giữa map và text */
     align-items: flex-start;
-    /* giữ top căn hàng nhau */
     margin-top: 20px;
 }
 
@@ -282,13 +264,11 @@ p {
     /* Laptop */
     max-width: 1150px;
     margin: 15px auto;
-    /* centers the paragraph */
     padding: 0px 20px;
-    /* spacing on small screens */
     margin-top: 5px;
-    /* reduce space above */
     margin-bottom: 5px;
     margin-right: 5px;
+    line-height: 1.6;
 }
 
 .featured-destinations-section .section-content .content-destination-card .destination-card .buttons {
@@ -306,45 +286,15 @@ p {
 
 }
 
-/* Gallery section */
-/* .gallery-section {
-    padding: 0px 20px;   
-}
-
-.gallery-section .gallery-item {
-    overflow: hidden;
-    width: calc(100%/ 3 - 10px);
-}
-
-.gallery-section .gallery-image {
-    width: 100%;
-    height: auto;
-    cursor: zoom-in;
-    transition: 0.3s ease;
-}
-
-.gallery-section .gallery-item figcaption {
-  background-color: black;
-  color: white;
-  font-style: italic;
-  padding: 2px;
-  text-align: center;
-  font-size: 10px;
-} */
-
 /* Highlighted travel tips */
 .featured-destinations-section .section-content .paragraph {
     font-size: 16px;
-    /* Kích thước chữ */
     color: #333;
-    /* Màu chữ */
     font-family: 'Inter', sans-serif;
     padding-left: 0;
     list-style-position: inside;
-    /* Đảm bảo bullet nằm bên trong danh sách */
     line-height: 1.6;
     max-width: 1150px;
-    /* Giới hạn chiều rộng */
     margin-inline: auto;
 }
 
@@ -371,19 +321,14 @@ p {
 .section-content .secondheading {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* 3 cột, mỗi cột chiếm 1 phần bằng nhau */
+    /* 3 columns, each column occupies an equal part */
     gap: 20px;
-    /* Khoảng cách giữa các nút */
     justify-content: center;
-    /* Căn giữa các nút */
     align-items: center;
-    /* Căn giữa theo chiều dọc */
     list-style: none;
-    /* Loại bỏ bullet points */
     padding: 0;
     margin: 10px auto;
     max-width: 800px;
-    /* Giới hạn chiều rộng */
 }
 
 /* Styling for individual buttons */
@@ -398,15 +343,12 @@ p {
     font-family: 'Aclonica', sans-serif;
     text-decoration: none;
     background-color: #D8FCB9;
-    ;
-    /* Màu nền */
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .secondheading .buttons :hover {
     color: orange;
-    /* Orange hover effect */
 }
 
 .region-section-content {
@@ -425,13 +367,10 @@ p {
 .video-container {
     position: relative;
     width: 100%;
-    /* Video sẽ chiếm toàn bộ chiều rộng của container */
     max-width: 1150px;
-    /* Giới hạn chiều rộng tối đa trên laptop */
     margin: 0 auto;
-    /* Căn giữa video */
     padding-top: 56.25%;
-    /* Tỷ lệ 16:9 (chiều cao = 56.25% chiều rộng) */
+    z-index: 2;
 }
 
 .video-container iframe {
@@ -439,29 +378,23 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    /* Chiều rộng video tự động điều chỉnh */
     height: 100%;
-    /* Chiều cao video tự động điều chỉnh */
     border: none;
-    z-index: -1;
+    z-index: 2;
 }
 
 .destinationscontent .paragraph {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     margin: 10px auto;
-    /* centers the paragraph */
     padding: 0 20px;
-    /* spacing on small screens */
     line-height: 1.6;
     color: #333;
 }
 
 .place-image .image {
     width: 220px;
-    /* Đặt kích thước cố định cho ảnh */
     height: 270px;
-    /* Đặt chiều cao cố định để đồng nhất */
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -469,10 +402,8 @@ p {
 
 .imgcontent {
     display: flex;
-    gap: 20px;
     align-items: flex-start;
     margin: 20px auto;
-    margin-top: 20px;
     max-width: 900px;
     justify-content: flex-start;
 }
@@ -481,25 +412,20 @@ p {
 .placescontent {
     display: flex;
     flex-direction: column;
-    /* Sắp xếp tiêu đề và đoạn văn theo chiều dọc */
-    /* Căn lề trái cho nội dung */
+    /* Arrange headings and paragraphs vertically */
     margin-left: 10px;
-    /* Dịch nội dung sát bên ảnh */
     max-width: 800px;
 }
 
 .places-title {
     margin-bottom: 10px;
-    /* Tạo khoảng cách giữa tiêu đề và đoạn văn */
     font-weight: bold;
     color: #333;
 }
 
 .content.hhk p {
     font-size: 14px;
-    /* Kích thước đoạn văn */
     line-height: 1.6;
-    /* Khoảng cách dòng */
     color: #666;
 }
 
@@ -511,12 +437,10 @@ p {
     align-content: center;
     text-align: center;
     padding: 0px 20px;
-    /* spacing on small screens */
 }
 
 .short-tip .short-tips-title {
     margin-bottom: 10px;
-    /* Tạo khoảng cách giữa tiêu đề và đoạn văn */
     font-weight: bold;
     color: #333;
 }
@@ -553,55 +477,36 @@ p {
 /* Travel tips section */
 .culture-insight-section .section-content .table {
     max-width: 1150px;
-    /* Đặt bảng chiếm toàn bộ chiều rộng */
     border-collapse: collapse;
-    /* Loại bỏ khoảng cách giữa các ô */
     margin: 20px auto;
-    /* Căn giữa bảng */
     text-align: left;
-    /* Căn trái nội dung mặc định */
     border: 1px solid #000;
-    /* Đường viền bảng */
 }
 
 .culture-insight-section .section-content .table th {
     text-align: center;
-    /* Căn giữa nội dung */
     font-weight: bold;
-    /* In đậm */
     background-color: #f0f0f0;
-    /* Màu nền nhạt */
     padding: 10px;
-    /* Khoảng cách bên trong ô */
     border: 1px solid #000;
-    /* Đường viền ô */
 }
 
-/* Định dạng nội dung (td) */
 .culture-insight-section .section-content .table td {
     padding: 10px;
-    /* Khoảng cách bên trong ô */
     border: 1px solid #000;
-    /* Đường viền ô */
     vertical-align: top;
-    /* Căn nội dung lên trên */
 }
 
 /* Communication tips section */
 .travel-tip-section .section-content .paragraph {
     list-style-type: disc;
-    /* Kiểu bullet (dấu chấm) */
     font-size: 16px;
-    /* Kích thước chữ */
     color: #333;
-    /* Màu chữ */
     font-family: 'Inter', sans-serif;
     padding-left: 0;
     list-style-position: inside;
-    /* Đảm bảo bullet nằm bên trong danh sách */
     line-height: 1.6;
     max-width: 1150px;
-    /* Giới hạn chiều rộng */
     margin-inline: auto;
 }
 
@@ -609,7 +514,6 @@ p {
 /* Footer Styles */
 .footer-section {
     background-color: #D8FCB9;
-    /* Xanh lá nhẹ nhàng */
     text-align: center;
 }
 
@@ -642,7 +546,6 @@ p {
 
 .social-icons a:hover img {
     transform: scale(1.2);
-    /* Hiệu ứng hover */
 }
 
 /* Responsive cho mobile nhỏ */
@@ -660,16 +563,20 @@ p {
 /* Mobile screen adjustments */
 @media (max-width: 768px) {
     .introduction-paragraph {
-        font-size: 15px;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .featured-destinations-section .section-content .paragraph {
+        font-size: 16px;
+        padding: 10px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .place-image .image {
         width: 180px;
-        /* Giảm kích thước ảnh trên màn hình nhỏ */
         height: 220px;
-        /* Giảm chiều cao tương ứng */
     }
 }
 
@@ -681,10 +588,8 @@ p {
     gap: 10px;
     /* Space between the map and content */
     align-items: start;
-    /* Align items at the top */
     margin: 20px auto;
     max-width: 1150px;
-    /* Limit the width of the container */
 }
 
 /* Map iframe styling */
@@ -694,7 +599,6 @@ p {
     height: 450px;
     /* Fixed height for laptop view */
     border: none;
-    /* Remove border */
 }
 
 /* Content destination card styling */
@@ -702,7 +606,6 @@ p {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* Space between destination cards */
 }
 
 /* Responsive layout for smaller screens */
@@ -724,16 +627,14 @@ p {
         grid-template-columns: 1fr;
         /* 2 cột trên tablet */
         gap: 10px;
-        /* Giảm khoảng cách giữa các nút */
     }
 }
 
 @media screen and (max-width: 480px) {
     .section-content .secondheading {
         grid-template-columns: 1fr;
-        /* 1 cột trên điện thoại */
+        /* 1 column on mobile */
         gap: 15px;
-        /* Khoảng cách giữa các nút */
     }
 }
 
@@ -755,6 +656,7 @@ p {
         height: 100%;
         backdrop-filter: blur(5px);
         background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
     }
 
     .navbar :where(#menu-close-button, #menu-open-button) {
@@ -803,5 +705,22 @@ p {
         margin-top: 17px;
         text-align: center;
         text-decoration: none;
+    }
+
+    .imgcontent {
+        display: flex;
+        align-items: flex-start;
+        margin-left: 10px;
+        justify-content: flex-start;
+    }
+
+    .placescontent .places-description {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .placescontent .places-title {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
