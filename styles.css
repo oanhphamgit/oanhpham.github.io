@@ -6,7 +6,7 @@
 }
 
 :root {
-    --primary-color: #F57C00;
+    --primary-color: #C1440E;
     /* Orange */
     --secondary-color: #D8FCB9;
     /* Green */
@@ -131,7 +131,7 @@ h1 {
     font-family: 'Inknut Antiqua', serif;
     font-size: 32px;
     /* Laptop */
-    color: #F57C00;
+    color: #C1440E;
     margin-bottom: 0px;
 }
 
@@ -208,7 +208,7 @@ h4 {
     font-family: 'Inknut Antiqua', serif;
     font-size: 32px;
     font-weight: bold;
-    color: #F57C00;
+    color: #C1440E;
     text-align: center;
     margin-top: -12px;
     margin-bottom: -12px;
